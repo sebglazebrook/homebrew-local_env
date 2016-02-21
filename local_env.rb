@@ -9,19 +9,13 @@ class LocalEnv < Formula
   version "0.1.0"
   sha256 "ab8920884642469182c75a6bd02d950b79a9c475466b6e0277984debf2e89608"
 
-  #depends_on :x11 # if your formula requires any X11/XQuartz components
+  depends_on "git"
+  depends_on "neovim/neovim/neovim"
+  depends_on "aliases"
+  depends_on "the_silver_searcher"
 
   def install
     bin.install "local_env.sh"
-    # ENV.deparallelize  # if your formula fails when building in parallel
-
-    # Remove unrecognized options if warned by configure
-    #system "./configure", "--disable-debug",
-                          #"--disable-dependency-tracking",
-                          #"--disable-silent-rules",
-                          #"--prefix=#{prefix}"
-    ## system "cmake", ".", *std_cmake_args
-    #system "make", "install" # if this fails, try separate make/make install steps
   end
 
   test do
