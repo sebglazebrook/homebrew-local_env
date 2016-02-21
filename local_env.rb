@@ -3,25 +3,25 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
 class LocalEnv < Formula
-  desc ""
-  homepage ""
-  url "http://google.com"
+  desc "Dependency management for my local environment"
+  homepage "https://github.com/sebglazebrook/local_env_homebrew"
+  url "https://github.com/sebglazebrook/local_env/raw/master/releases/0.1.0/local_env.sh.tar.gz"
   version "0.1.0"
-  sha256 ""
+  sha256 "ab8920884642469182c75a6bd02d950b79a9c475466b6e0277984debf2e89608"
 
-  # depends_on "cmake" => :build
-  depends_on :x11 # if your formula requires any X11/XQuartz components
+  #depends_on :x11 # if your formula requires any X11/XQuartz components
 
   def install
+    bin.install "local_env.sh"
     # ENV.deparallelize  # if your formula fails when building in parallel
 
     # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
-    system "make", "install" # if this fails, try separate make/make install steps
+    #system "./configure", "--disable-debug",
+                          #"--disable-dependency-tracking",
+                          #"--disable-silent-rules",
+                          #"--prefix=#{prefix}"
+    ## system "cmake", ".", *std_cmake_args
+    #system "make", "install" # if this fails, try separate make/make install steps
   end
 
   test do
