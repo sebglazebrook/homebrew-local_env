@@ -13,6 +13,7 @@ class LocalEnv < Formula
   depends_on "neovim/neovim/neovim"
   depends_on "aliases"
   depends_on "the_silver_searcher"
+  depends_on "z"
   depends_on "docker"
   depends_on "docker-compose"
   depends_on "docker-machine"
