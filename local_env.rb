@@ -13,6 +13,10 @@ class LocalEnv < Formula
   depends_on "neovim/neovim/neovim"
   depends_on "aliases"
   depends_on "the_silver_searcher"
+  depends_on "docker"
+  depends_on "docker-compose"
+  depends_on "docker-machine"
+  depends_on "docker-swarm"
 
   def install
     bin.install "local_env.sh"
